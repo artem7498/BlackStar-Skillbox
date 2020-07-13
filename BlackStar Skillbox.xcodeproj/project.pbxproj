@@ -14,6 +14,8 @@
 		AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAEA24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld */; };
 		AC6FCAEE24B83675007E6CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6FCAED24B83675007E6CC3 /* Assets.xcassets */; };
 		AC6FCAF124B83675007E6CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6FCAEF24B83675007E6CC3 /* LaunchScreen.storyboard */; };
+		AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */; };
+		AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		AC6FCAED24B83675007E6CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6FCAF024B83675007E6CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6FCAF224B83675007E6CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
 				AC6FCAE524B83672007E6CC3 /* ViewController.swift */,
+				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
+				AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */,
 				AC6FCAED24B83675007E6CC3 /* Assets.xcassets */,
 				AC6FCAEF24B83675007E6CC3 /* LaunchScreen.storyboard */,
 				AC6FCAF224B83675007E6CC3 /* Info.plist */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */,
+				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* ViewController.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,
