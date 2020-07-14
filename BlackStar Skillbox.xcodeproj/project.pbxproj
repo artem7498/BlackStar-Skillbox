@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4948971B060984B6506BCA /* Pods_BlackStar_Skillbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */; };
+		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
 		AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */; };
 		AC6FCAE424B83672007E6CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */; };
 		AC6FCAE624B83672007E6CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE524B83672007E6CC3 /* ViewController.swift */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar Skillbox.release.xcconfig"; path = "Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox.release.xcconfig"; sourceTree = "<group>"; };
+		2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStar_Skillbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
 		AC6FCADE24B83672007E6CC3 /* BlackStar Skillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlackStar Skillbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		AC6FCAF224B83675007E6CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponse.swift; sourceTree = "<group>"; };
+		B9FA587D7CDA95A1F1C51FE4 /* Pods-BlackStar Skillbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar Skillbox.debug.xcconfig"; path = "Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4948971B060984B6506BCA /* Pods_BlackStar_Skillbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		534185178FFC0925F97D2503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6ED322230A9556E26A37D69F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9FA587D7CDA95A1F1C51FE4 /* Pods-BlackStar Skillbox.debug.xcconfig */,
+				0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AC6FCAD524B83672007E6CC3 = {
 			isa = PBXGroup;
 			children = (
 				AC6FCAE024B83672007E6CC3 /* BlackStar Skillbox */,
 				AC6FCADF24B83672007E6CC3 /* Products */,
+				6ED322230A9556E26A37D69F /* Pods */,
+				534185178FFC0925F97D2503 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +92,7 @@
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
 				AC6FCAE524B83672007E6CC3 /* ViewController.swift */,
 				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
+				AC6478F024BDE25200632BEB /* CategoriesLoader.swift */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
 				AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */,
 				AC6FCAED24B83675007E6CC3 /* Assets.xcassets */,
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC6FCAF524B83675007E6CC3 /* Build configuration list for PBXNativeTarget "BlackStar Skillbox" */;
 			buildPhases = (
+				9D347B62594E38F772A5C9ED /* [CP] Check Pods Manifest.lock */,
 				AC6FCADA24B83672007E6CC3 /* Sources */,
 				AC6FCADB24B83672007E6CC3 /* Frameworks */,
 				AC6FCADC24B83672007E6CC3 /* Resources */,
+				FCB184D51D07C0E7031FC248 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +171,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D347B62594E38F772A5C9ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackStar Skillbox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB184D51D07C0E7031FC248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC6FCADA24B83672007E6CC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +220,7 @@
 			files = (
 				AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */,
 				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
+				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* ViewController.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,
@@ -294,6 +366,7 @@
 		};
 		AC6FCAF624B83675007E6CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9FA587D7CDA95A1F1C51FE4 /* Pods-BlackStar Skillbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +385,7 @@
 		};
 		AC6FCAF724B83675007E6CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
