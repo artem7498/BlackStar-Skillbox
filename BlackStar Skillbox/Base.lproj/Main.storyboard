@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="Sry-Lz-Zd6" customClass="CategoryTableViewCell" customModule="BlackStar_Skillbox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="Sry-Lz-Zd6" customClass="CategoryTableViewCell" customModule="BlackStar_Skillbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sry-Lz-Zd6" id="tcr-Pr-b7L">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Or-cq-DTk">
@@ -52,6 +52,7 @@
                                         <connections>
                                             <outlet property="categoryImage" destination="2Or-cq-DTk" id="1qU-dc-XcL"/>
                                             <outlet property="categoryNameLabel" destination="v26-3q-MYw" id="3bW-wX-0c2"/>
+                                            <segue destination="Dx0-pR-jth" kind="show" id="JaF-E7-HOz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -77,7 +78,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJM-Zu-7hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.1739130434785" y="-604.01785714285711"/>
+            <point key="canvasLocation" x="1951" y="-604"/>
+        </scene>
+        <!--Подкатегории-->
+        <scene sceneID="SZF-Qw-qgp">
+            <objects>
+                <tableViewController id="Dx0-pR-jth" customClass="SubcategoryTableViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="ut3-a3-Uno">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="130" id="vRX-AM-96e" customClass="SubcategoryTableViewCell" customModule="BlackStar_Skillbox" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRX-AM-96e" id="i4L-7U-3Qx">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-p5-BsR">
+                                            <rect key="frame" x="20" y="0.0" width="130" height="130"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="ISX-qr-D1a"/>
+                                                <constraint firstAttribute="height" constant="130" id="SnY-oE-uCa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngJ-KQ-4W5">
+                                            <rect key="frame" x="175" y="52" width="180" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ngJ-KQ-4W5" firstAttribute="centerY" secondItem="i4L-7U-3Qx" secondAttribute="centerY" id="GIn-S9-SwM"/>
+                                        <constraint firstItem="ngJ-KQ-4W5" firstAttribute="leading" secondItem="9Vh-p5-BsR" secondAttribute="trailing" constant="25" id="J9L-f8-ezd"/>
+                                        <constraint firstItem="9Vh-p5-BsR" firstAttribute="centerY" secondItem="i4L-7U-3Qx" secondAttribute="centerY" id="SLh-vX-sg5"/>
+                                        <constraint firstItem="9Vh-p5-BsR" firstAttribute="leading" secondItem="i4L-7U-3Qx" secondAttribute="leading" constant="20" id="UXP-6o-Kx7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subcategoryImage" destination="9Vh-p5-BsR" id="CsF-Z9-G6k"/>
+                                    <outlet property="subcategoryNameLabel" destination="ngJ-KQ-4W5" id="sy4-zu-D74"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dx0-pR-jth" id="9Kj-1y-6AR"/>
+                            <outlet property="delegate" destination="Dx0-pR-jth" id="TqJ-7r-ezB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Подкатегории" id="kS3-bw-Vli"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXv-fN-xU5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="-604"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

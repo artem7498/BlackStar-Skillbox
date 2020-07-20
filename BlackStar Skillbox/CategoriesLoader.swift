@@ -21,17 +21,3 @@ func loadCategories(completion: @escaping ([Category]) -> Void){
             }
     }
 }
-
-//func loadCategories2(completion: @escaping ([Category]) -> Void){
-//   let urlString = "https://blackstarshop.ru/index.php?route=api/v1/categories"
-//            guard let url = URL(string: urlString) else {return}
-//            URLSession.shared.dataTask(with: url) { (data, _, _) in
-//                if let data = data {
-//                let JSONResponse = try? JSONDecoder().decode(Category.self, from: data)
-//                    if let categories = JSONResponse {
-//                        print(categories)
-//                    }
-//        }
-//
-//    }.resume()
-//}

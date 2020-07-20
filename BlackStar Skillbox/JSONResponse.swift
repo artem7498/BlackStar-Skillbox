@@ -12,50 +12,40 @@ struct Category {
     var name: String?
     var image: String?
     var iconImage: String?
-//    var subcategories: [Subcategories]
-
+    var subcategories: [Subcategory]?
+    
+    
     init?(data: NSDictionary){
         guard let name = data["name"] as? String,
-            let image = data["image"] as? String else { return nil }
+            let image = data["image"] as? String,
+            let iconImage = data["iconImage"] as? String,
+            let subCat = data["subcategories"] as? [NSDictionary] else { return nil }
+        
+        var tempArray = [Subcategory]()
+        subCat.forEach { dictItem in
+            let subCategoryItem = Subcategory(data: dictItem)
+            tempArray.append(subCategoryItem!)
+        }
+        
         self.name = name
         self.image = image
+        self.iconImage = iconImage
+        self.subcategories = tempArray
     }
 }
 
-struct Subcategories {
+struct Subcategory {
     var iconImage: String?
     var name: String?
+    var type: String?
 
     init?(data: NSDictionary){
-        guard let subcategories = data["subcategories"] as? [NSDictionary],
-        let iconImage = subcategories[0]["iconImage"] as? String,
-        let name = subcategories[0]["name"] as? String else { return nil }
+        guard let iconImage = data["iconImage"] as? String,
+        let name = data["name"] as? String,
+        let type = data["type"] as? String else { return nil }
+        
         self.iconImage = iconImage
         self.name = name
+        self.type = type
     }
 }
-
-//struct CategoryCode: Decodable{
-//    var categories: [Category]
-//}
-
-//struct Category: Decodable{
-//    var name: String?
-//    var image: String?
-//    var iconImage: String?
-//
-//    private enum MainKeys: String, CodingKey {
-//        case name
-//        case image
-//        case iconImage
-//    }
-//
-//    init (from decoder: Decoder) throws {
-//        if let categoryContainer = try? decoder.container(keyedBy: MainKeys.self){
-//            self.name = try categoryContainer.decode(String.self, forKey: .name)
-//            self.image = try categoryContainer.decode(String.self, forKey: .image)
-//            self.iconImage = try categoryContainer.decode(String.self, forKey: .iconImage)
-//        }
-//    }
-//}
-

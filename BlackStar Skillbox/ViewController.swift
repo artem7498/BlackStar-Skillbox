@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var categories: [Category] = []
+    var subcategoryArray: [Subcategory] = []
 
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
@@ -25,37 +26,12 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
             print(categories)
         }
-        
-//        let urlString = "https://blackstarshop.ru/index.php?route=api/v1/categories"
-//        guard let url = URL(string: urlString) else {return}
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            DispatchQueue.main.async {
-//                 if let error = error {
-//                    print("Some error", error)
-//                    return
-//                }
-//                guard let data = data else {return}
-//
-//                do {
-//                    let websiteDescription = try JSONDecoder().decode(Categories.self, from: data)
-//                    print(websiteDescription.name ?? "no data")
-//                } catch let jsonError {
-//                    print(jsonError)
-//                    return
-//                }
-//            }
-//        }.resume()
-        
-        
-        
-        
     }
     private func setupSearchBar(){
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
     }
-
 
 }
 
@@ -71,6 +47,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let index = tableView.indexPath(for: cell){
+
+            print("pressed on \(categories[index.row])")
+    
+        }
+    }
     
 }
 
