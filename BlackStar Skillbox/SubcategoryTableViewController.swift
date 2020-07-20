@@ -11,10 +11,11 @@ import UIKit
 class SubcategoryTableViewController: UITableViewController {
     
     var subcategories: [Subcategory] = []
-
+    
+    @IBOutlet var subCatTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
 
@@ -28,7 +29,7 @@ class SubcategoryTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SubcategoryTableViewCell
-        cell.subcategoryNameLabel.text = "hi"
+        cell.subcategoryNameLabel.text =  "no data"
         cell.subcategoryImage.image = UIImage(named: "Сотовая связь")
 
         return cell

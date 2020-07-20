@@ -49,6 +49,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let index = tableView.indexPath(for: cell){
+            
+            let destVC = segue.destination as! SubcategoryTableViewController
+            
+            
+//            как здесь правильно передать подкатегории, пробовал достать tempArray, но чего то не получается
+
+//            var passingArray : [Category]
+//            passingArray = [categories[index.row]]
+//            destVC.subcategories = passingArray
 
             print("pressed on \(categories[index.row])")
     

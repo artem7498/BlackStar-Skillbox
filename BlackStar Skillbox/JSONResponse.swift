@@ -36,7 +36,7 @@ struct Category {
 
 struct Subcategory {
     var iconImage: String?
-    var name: String?
+    var subname: String?
     var type: String?
 
     init?(data: NSDictionary){
@@ -45,7 +45,7 @@ struct Subcategory {
         let type = data["type"] as? String else { return nil }
         
         self.iconImage = iconImage
-        self.name = name
+        self.subname = name
         self.type = type
     }
 }
