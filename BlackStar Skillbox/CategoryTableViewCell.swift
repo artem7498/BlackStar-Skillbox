@@ -9,6 +9,16 @@
 import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
+    
+    var category: Category? {
+        didSet{
+            guard let unwrappedCategory = category else {return}
+            
+            categoryImage.image = UIImage(named: unwrappedCategory.image! /*?? "сотовая связь"*/)
+            categoryNameLabel.text = unwrappedCategory.name
+//            print(category?.name)
+        }
+    }
 
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!

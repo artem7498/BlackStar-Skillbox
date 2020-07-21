@@ -52,7 +52,6 @@
                                         <connections>
                                             <outlet property="categoryImage" destination="2Or-cq-DTk" id="1qU-dc-XcL"/>
                                             <outlet property="categoryNameLabel" destination="v26-3q-MYw" id="3bW-wX-0c2"/>
-                                            <segue destination="Dx0-pR-jth" kind="show" id="JaF-E7-HOz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

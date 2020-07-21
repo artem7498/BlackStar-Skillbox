@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 func loadCategories(completion: @escaping ([Category]) -> Void){
-    AF.request("https://blackstarshop.ru/index.php?route=api/v1/categories").responseJSON { response in
+    AF.request(URLData.shared.categoryURL).responseJSON { response in
         if let objects = response.value,
             let jsonDict = objects as? NSDictionary{
                 DispatchQueue.main.async {
