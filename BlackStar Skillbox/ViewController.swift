@@ -44,25 +44,31 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        if subcategoryArray.isEmpty {
+            return categories.count
+        } else {
+            return subcategoryArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CategoryTableViewCell
         
-        let category = categories[indexPath.item]
-        cell.category = category
-//        cell.categoryNameLabel.text = categories[indexPath.row].name
-//        cell.categoryImage.image = UIImage(named: categories[indexPath.row].image ?? "Сотовая связь")
+        if subcategoryArray.isEmpty {
+            let category = categories[indexPath.row]
+            cell.category = category
+        } else {
+            let subCategory = subcategoryArray[indexPath.row]
+            cell.subCategory = subCategory
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        performSegue(withIdentifier: "", sender: categories[indexPath.row])
-        
-        print("cat")
-        
+        subcategoryArray = categories[indexPath.row].subcategories ?? []
+        tableView.reloadData()
     }
     
 }

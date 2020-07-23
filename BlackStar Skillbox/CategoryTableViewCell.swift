@@ -19,6 +19,15 @@ class CategoryTableViewCell: UITableViewCell {
 //            print(category?.name)
         }
     }
+    
+    var subCategory: Subcategory? {
+        didSet{
+            guard let unwrappedSubCategory = subCategory else {return}
+            
+            categoryImage.image = UIImage(named: unwrappedSubCategory.iconImage!)
+            categoryNameLabel.text = unwrappedSubCategory.subname
+        }
+    }
 
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryNameLabel: UILabel!
