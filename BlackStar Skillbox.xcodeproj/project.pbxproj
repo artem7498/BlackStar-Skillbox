@@ -14,7 +14,7 @@
 		AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */; };
 		AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */; };
 		AC6FCAE424B83672007E6CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */; };
-		AC6FCAE624B83672007E6CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE524B83672007E6CC3 /* ViewController.swift */; };
+		AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE524B83672007E6CC3 /* CategoryViewController.swift */; };
 		AC6FCAE924B83672007E6CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6FCAE724B83672007E6CC3 /* Main.storyboard */; };
 		AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAEA24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld */; };
 		AC6FCAEE24B83675007E6CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6FCAED24B83675007E6CC3 /* Assets.xcassets */; };
@@ -33,7 +33,7 @@
 		AC6FCADE24B83672007E6CC3 /* BlackStar Skillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlackStar Skillbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC6FCAE524B83672007E6CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC6FCAE524B83672007E6CC3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		AC6FCAE824B83672007E6CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC6FCAEB24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackStar_Skillbox.xcdatamodel; sourceTree = "<group>"; };
 		AC6FCAED24B83675007E6CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +73,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AC2A0C8024C992D900511951 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AC6FCAE524B83672007E6CC3 /* CategoryViewController.swift */,
+				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
+				AC6478F024BDE25200632BEB /* CategoriesLoader.swift */,
+				AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		AC6FCAD524B83672007E6CC3 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +107,10 @@
 			children = (
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
-				AC6FCAE524B83672007E6CC3 /* ViewController.swift */,
-				AC2A0C7C24C6ED7400511951 /* URLData.swift */,
+				AC2A0C8024C992D900511951 /* Categories */,
 				AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */,
-				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
-				AC6478F024BDE25200632BEB /* CategoriesLoader.swift */,
+				AC2A0C7C24C6ED7400511951 /* URLData.swift */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
-				AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */,
 				AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */,
 				AC6FCAED24B83675007E6CC3 /* Assets.xcassets */,
 				AC6FCAEF24B83675007E6CC3 /* LaunchScreen.storyboard */,
@@ -231,7 +239,7 @@
 				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
 				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
 				AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */,
-				AC6FCAE624B83672007E6CC3 /* ViewController.swift in Sources */,
+				AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,
 				AC6478F324C0559400632BEB /* SubcategoryTableViewController.swift in Sources */,

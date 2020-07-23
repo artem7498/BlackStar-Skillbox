@@ -8,17 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CategoryViewController: UIViewController {
     
     var categories: [Category] = []
     var subcategoryArray: [Subcategory] = []
 
+   
     @IBOutlet weak var tableView: UITableView!
+    
+     @IBOutlet weak var backToCategoryButton: UIBarButtonItem!
+    
+    @IBAction func backToCategoryButton(_ sender: Any) {
+        categories.removeAll()
+        subcategoryArray.removeAll()
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        loadCategories { categories in
+            self.categories = categories
+            self.tableView.reloadData()
+            print(categories)
+        }
+    }
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
+        navigationItem.leftBarButtonItem?.isEnabled = false
         // Do any additional setup after loading the view.
         loadCategories { categories in
             self.categories = categories
@@ -42,7 +57,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if subcategoryArray.isEmpty {
             return categories.count
@@ -60,6 +75,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
+            navigationItem.leftBarButtonItem?.isEnabled = true
         }
         
         return cell
@@ -73,7 +89,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension ViewController: UISearchBarDelegate {
+extension CategoryViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }

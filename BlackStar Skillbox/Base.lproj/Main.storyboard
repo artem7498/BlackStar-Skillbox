@@ -11,7 +11,7 @@
         <!--Категории-->
         <scene sceneID="f1l-G3-Eyt">
             <objects>
-                <viewController id="QHZ-fx-6Rs" customClass="ViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QHZ-fx-6Rs" customClass="CategoryViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tak-za-edw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,14 +70,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FzA-z3-j3v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Категории" id="NT0-x1-Umb"/>
+                    <navigationItem key="navigationItem" title="Категории" id="NT0-x1-Umb">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" style="plain" id="rpE-km-ccf">
+                            <connections>
+                                <action selector="backToCategoryButton:" destination="QHZ-fx-6Rs" id="cIE-r0-Etx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backToCategoryButton" destination="rpE-km-ccf" id="Dp0-PS-nEB"/>
                         <outlet property="tableView" destination="cob-ev-Kjj" id="7w9-Oy-G4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJM-Zu-7hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="-604"/>
+            <point key="canvasLocation" x="1991" y="-604"/>
         </scene>
         <!--Подкатегории-->
         <scene sceneID="SZF-Qw-qgp">
@@ -235,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="84"/>
+            <point key="canvasLocation" x="1990" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aQ3-if-1Rl">
@@ -256,4 +263,7 @@
             <point key="canvasLocation" x="1044.9275362318842" y="-604.01785714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+    </resources>
 </document>
