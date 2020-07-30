@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var showProductsButton: UIButton!
+    
     var category: Category? {
         didSet{
             guard let unwrappedCategory = category else {return}

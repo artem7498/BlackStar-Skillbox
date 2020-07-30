@@ -35,6 +35,7 @@ struct Category {
 }
 
 struct Subcategory {
+//    var id: String?
     var iconImage: String?
     var subname: String?
     var type: String?
@@ -44,6 +45,7 @@ struct Subcategory {
         let name = data["name"] as? String,
         let type = data["type"] as? String else { return nil }
         
+//        self.id = id
         self.iconImage = iconImage
         self.subname = name
         self.type = type

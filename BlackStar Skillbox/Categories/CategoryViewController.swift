@@ -25,7 +25,7 @@ class CategoryViewController: UIViewController {
         loadCategories { categories in
             self.categories = categories
             self.tableView.reloadData()
-            print(categories)
+//            print(categories)
         }
     }
     let searchController = UISearchController(searchResultsController: nil)
@@ -38,7 +38,7 @@ class CategoryViewController: UIViewController {
         loadCategories { categories in
             self.categories = categories
             self.tableView.reloadData()
-            print(categories)
+//            print(categories)
         }
     }
     private func setupSearchBar(){
@@ -48,10 +48,10 @@ class CategoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let cell = sender as? UITableViewCell, let index = tableView.indexPath(for: cell){
-
-            print("pressed on \(categories[index.row])")
-    
+        if let vc = segue.destination as? ProductsViewController, segue.identifier == "ShowProducts"{
+//            vc.id = "hello"
+            print(vc.id)
+//                subcategoryArray[tableView.indexPathForSelectedRow?.row]
         }
     }
 
@@ -72,10 +72,13 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         if subcategoryArray.isEmpty {
             let category = categories[indexPath.row]
             cell.category = category
+            cell.showProductsButton.isHidden = true
         } else {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
             navigationItem.leftBarButtonItem?.isEnabled = true
+            cell.showProductsButton.isHidden = false
+            
         }
         
         return cell

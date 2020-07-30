@@ -41,17 +41,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xc-eo-cyD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="411" height="130"/>
+                                                    <connections>
+                                                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowProducts" id="nlY-zg-8KJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="6Xc-eo-cyD" secondAttribute="trailing" constant="-28" id="6Pv-gU-qX4"/>
                                                 <constraint firstItem="2Or-cq-DTk" firstAttribute="leading" secondItem="tcr-Pr-b7L" secondAttribute="leadingMargin" id="6Vr-SZ-n8s"/>
                                                 <constraint firstItem="2Or-cq-DTk" firstAttribute="centerY" secondItem="tcr-Pr-b7L" secondAttribute="centerY" id="N34-u9-trl"/>
                                                 <constraint firstItem="v26-3q-MYw" firstAttribute="leading" secondItem="2Or-cq-DTk" secondAttribute="trailing" constant="25" id="WDd-hK-Xxz"/>
+                                                <constraint firstItem="6Xc-eo-cyD" firstAttribute="leading" secondItem="tcr-Pr-b7L" secondAttribute="leading" id="ZTM-VO-1ao"/>
+                                                <constraint firstItem="6Xc-eo-cyD" firstAttribute="top" secondItem="tcr-Pr-b7L" secondAttribute="top" id="jgU-gf-cZV"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Xc-eo-cyD" secondAttribute="bottom" id="kvb-i4-Dda"/>
                                                 <constraint firstItem="v26-3q-MYw" firstAttribute="centerY" secondItem="tcr-Pr-b7L" secondAttribute="centerY" id="sRv-F8-Z5P"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImage" destination="2Or-cq-DTk" id="1qU-dc-XcL"/>
                                             <outlet property="categoryNameLabel" destination="v26-3q-MYw" id="3bW-wX-0c2"/>
+                                            <outlet property="showProductsButton" destination="6Xc-eo-cyD" id="700-4d-wBb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJM-Zu-7hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="-604"/>
+            <point key="canvasLocation" x="1989.8550724637682" y="-604.01785714285711"/>
         </scene>
         <!--Подкатегории-->
         <scene sceneID="SZF-Qw-qgp">
@@ -145,16 +156,16 @@
             </objects>
             <point key="canvasLocation" x="2901" y="-604"/>
         </scene>
-        <!--View Controller-->
+        <!--Products View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductsViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EkT-Lm-3SB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ST-oc-fVw">
                                     <size key="itemSize" width="182" height="240"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A4948971B060984B6506BCA /* Pods_BlackStar_Skillbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */; };
 		AC2A0C7D24C6ED7400511951 /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C7C24C6ED7400511951 /* URLData.swift */; };
+		AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8324D2925B00511951 /* ProductsViewController.swift */; };
+		AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */; };
 		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
 		AC6478F324C0559400632BEB /* SubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */; };
 		AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */; };
@@ -27,6 +29,8 @@
 		0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar Skillbox.release.xcconfig"; path = "Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox.release.xcconfig"; sourceTree = "<group>"; };
 		2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStar_Skillbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2A0C7C24C6ED7400511951 /* URLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
+		AC2A0C8324D2925B00511951 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductJSONResponse.swift; sourceTree = "<group>"; };
 		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
 		AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewController.swift; sourceTree = "<group>"; };
 		AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,11 +81,35 @@
 			isa = PBXGroup;
 			children = (
 				AC6FCAE524B83672007E6CC3 /* CategoryViewController.swift */,
-				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
-				AC6478F024BDE25200632BEB /* CategoriesLoader.swift */,
 				AC6FCB0024BC467F007E6CC3 /* CategoryTableViewCell.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		AC2A0C8124C994BB00511951 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				AC2A0C7C24C6ED7400511951 /* URLData.swift */,
+				AC6478F024BDE25200632BEB /* CategoriesLoader.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		AC2A0C8224C994EF00511951 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC6FCB0224BCB081007E6CC3 /* JSONResponse.swift */,
+				AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC2A0C8524D2926A00511951 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2A0C8324D2925B00511951 /* ProductsViewController.swift */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		AC6FCAD524B83672007E6CC3 = {
@@ -107,11 +135,13 @@
 			children = (
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
+				AC2A0C8524D2926A00511951 /* Products */,
 				AC2A0C8024C992D900511951 /* Categories */,
-				AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */,
-				AC2A0C7C24C6ED7400511951 /* URLData.swift */,
+				AC2A0C8124C994BB00511951 /* NetworkService */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
+				AC2A0C8224C994EF00511951 /* Models */,
 				AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */,
+				AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */,
 				AC6FCAED24B83675007E6CC3 /* Assets.xcassets */,
 				AC6FCAEF24B83675007E6CC3 /* LaunchScreen.storyboard */,
 				AC6FCAF224B83675007E6CC3 /* Info.plist */,
@@ -237,8 +267,10 @@
 			files = (
 				AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */,
 				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
+				AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */,
 				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
 				AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */,
+				AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,

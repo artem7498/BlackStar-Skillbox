@@ -21,3 +21,18 @@ func loadCategories(completion: @escaping ([Category]) -> Void){
             }
     }
 }
+
+func loadProducts(completion: @escaping ([Products]) -> Void){
+    AF.request(URLData.shared.productsURL).responseJSON { response in
+        if let objects = response.value,
+            let jsonDict = objects as? NSDictionary{
+                DispatchQueue.main.async {
+                    let products = jsonDict.compactMap { _, s in s as? NSDictionary}
+                        .compactMap(Products.init)
+                    completion(products)
+                    print(products)
+                    print(response)
+                }
+            }
+    }
+}
