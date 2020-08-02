@@ -48,10 +48,9 @@ class CategoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ProductsViewController, segue.identifier == "ShowProducts"{
-//            vc.id = "hello"
+        if let vc = segue.destination as? ProductsViewController, segue.identifier == "Show Products", let id = sender as? String {
+            vc.id = id
             print(vc.id)
-//                subcategoryArray[tableView.indexPathForSelectedRow?.row]
         }
     }
 
@@ -72,12 +71,12 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         if subcategoryArray.isEmpty {
             let category = categories[indexPath.row]
             cell.category = category
-            cell.showProductsButton.isHidden = true
+//            cell.showProductsButton.isHidden = true
         } else {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
             navigationItem.leftBarButtonItem?.isEnabled = true
-            cell.showProductsButton.isHidden = false
+//            cell.showProductsButton.isHidden = false
             
         }
         
@@ -85,6 +84,12 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !subcategoryArray.isEmpty {
+            performSegue(withIdentifier: "Show Products", sender: subcategoryArray[indexPath.row].id)
+//            print(subcategoryArray[indexPath.row].id)
+            return
+        }
         
         subcategoryArray = categories[indexPath.row].subcategories ?? []
         tableView.reloadData()

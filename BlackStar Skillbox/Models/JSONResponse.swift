@@ -23,8 +23,9 @@ struct Category {
         
         var tempArray = [Subcategory]()
         subCat.forEach { dictItem in
-            let subCategoryItem = Subcategory(data: dictItem)
-            tempArray.append(subCategoryItem!)
+            if let subCategoryItem = Subcategory(data: dictItem){
+                tempArray.append(subCategoryItem)
+            }
         }
         
         self.name = name
@@ -35,17 +36,18 @@ struct Category {
 }
 
 struct Subcategory {
-//    var id: String?
+    var id: String?
     var iconImage: String?
     var subname: String?
     var type: String?
 
     init?(data: NSDictionary){
-        guard let iconImage = data["iconImage"] as? String,
+        guard let id = data["id"] as? String,
+        let iconImage = data["iconImage"] as? String,
         let name = data["name"] as? String,
         let type = data["type"] as? String else { return nil }
         
-//        self.id = id
+        self.id = id
         self.iconImage = iconImage
         self.subname = name
         self.type = type

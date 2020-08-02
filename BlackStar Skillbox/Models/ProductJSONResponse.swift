@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Products {
     
     var name: String?
@@ -18,6 +17,7 @@ struct Products {
     var colorName: String?
     var mainImage: String?
     var productImages: [ProductImages]?
+    var sizes: [SizeOffers]?
     var price: String?
     
     init?(data: NSDictionary){
@@ -28,12 +28,22 @@ struct Products {
             let colorName = data["colorName"] as? String,
             let mainImage = data["mainImage"] as? String,
             let productImages = data["productImages"] as? [NSDictionary],
+            let sizes = data["offers"] as? [NSDictionary],
             let price = data["price"] as? String else { return nil }
         
         var tempArray = [ProductImages]()
         productImages.forEach { dictItem in
-            let prodImages = ProductImages(data: dictItem)
-            tempArray.append(prodImages!)
+            if let prodImages = ProductImages(data: dictItem){
+                tempArray.append(prodImages)
+                print(tempArray)
+            }
+        }
+        
+        var sizeArray = [SizeOffers]()
+        sizes.forEach { dictItem in
+            if let sizeOffers = SizeOffers(data: dictItem) {
+                sizeArray.append(sizeOffers)
+            }
         }
     
         self.name = name
@@ -43,23 +53,40 @@ struct Products {
         self.colorName = colorName
         self.mainImage = mainImage
         self.productImages = tempArray
+        self.sizes = sizeArray
         self.price = price
         
     }
 }
 
-struct ProductImages{
+struct ProductImages {
     
     var imageURL: String?
     var sortOrder: String?
     
     init?(data: NSDictionary){
-        
         guard let imageURL = data["imageURL"] as? String,
             let sortOrder = data["sortOrder"] as? String else { return nil }
         
         self.imageURL = imageURL
         self.sortOrder = sortOrder
+    }
+}
+
+struct SizeOffers {
+    
+    var size: String?
+    var productOfferID: String?
+    var quantity: String?
+    
+    init?(data: NSDictionary){
+        guard let size = data["size"] as? String,
+            let productOfferID = data["productOfferID"] as? String,
+            let quantity = data["quantity"] as? String else { return nil }
+        
+        self.size = size
+        self.productOfferID = productOfferID
+        self.quantity = quantity
     }
 }
 

@@ -14,6 +14,7 @@
 		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
 		AC6478F324C0559400632BEB /* SubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */; };
 		AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */; };
+		AC65A5C924D696F6003B37DA /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65A5C824D696F6003B37DA /* ProductsCollectionViewCell.swift */; };
 		AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */; };
 		AC6FCAE424B83672007E6CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */; };
 		AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE524B83672007E6CC3 /* CategoryViewController.swift */; };
@@ -34,6 +35,7 @@
 		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
 		AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewController.swift; sourceTree = "<group>"; };
 		AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AC65A5C824D696F6003B37DA /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC6FCADE24B83672007E6CC3 /* BlackStar Skillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlackStar Skillbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2A0C8324D2925B00511951 /* ProductsViewController.swift */,
+				AC65A5C824D696F6003B37DA /* ProductsCollectionViewCell.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC65A5C924D696F6003B37DA /* ProductsCollectionViewCell.swift in Sources */,
 				AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */,
 				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
 				AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */,

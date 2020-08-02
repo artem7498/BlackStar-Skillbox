@@ -17,6 +17,7 @@ func loadCategories(completion: @escaping ([Category]) -> Void){
                     let categories = jsonDict.compactMap { _, v in v as? NSDictionary}
                         .compactMap(Category.init)
                     completion(categories)
+//                    print(categories)
                 }
             }
     }

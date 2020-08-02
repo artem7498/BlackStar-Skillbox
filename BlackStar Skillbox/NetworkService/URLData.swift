@@ -9,10 +9,11 @@
 import Foundation
 
 class URLData {
+    
     static let shared = URLData()
     
     let categoryURL = "https://blackstarshop.ru/index.php?route=api/v1/categories"
     
-    let productsURL = "https://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(ProductsViewController.shared.id)"
+    let productsURL = "https://blackstarshop.ru/index.php?route=api/v1/products&cat_id=\(ProductsViewController.sharedd.id)"
     
 }
