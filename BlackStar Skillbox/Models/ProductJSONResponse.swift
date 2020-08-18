@@ -12,7 +12,7 @@ struct Products {
     
     var name: String?
     var article: String?
-    var collection: String?
+//    var collection: String?
     var description: String?
     var colorName: String?
     var mainImage: String?
@@ -23,7 +23,7 @@ struct Products {
     init?(data: NSDictionary){
         guard let name = data["name"] as? String,
             let article = data["article"] as? String,
-            let collection = data["collection"] as? String,
+//            let collection = data["collection"] as? String,
             let description = data["description"] as? String,
             let colorName = data["colorName"] as? String,
             let mainImage = data["mainImage"] as? String,
@@ -39,6 +39,7 @@ struct Products {
             }
         }
         
+        
         var sizeArray = [SizeOffers]()
         sizes.forEach { dictItem in
             if let sizeOffers = SizeOffers(data: dictItem) {
@@ -48,7 +49,7 @@ struct Products {
     
         self.name = name
         self.article = article
-        self.collection = collection
+//        self.collection = collection
         self.description = description
         self.colorName = colorName
         self.mainImage = mainImage

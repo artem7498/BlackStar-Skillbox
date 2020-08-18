@@ -10,7 +10,8 @@ import UIKit
 
 class ProductsViewController: UIViewController {
     
-    static let sharedd = ProductsViewController()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var products: [Products] = []
     var productImages: [ProductImages] = []
@@ -23,14 +24,15 @@ class ProductsViewController: UIViewController {
 //        print(URLData.shared.productsURL)
         
         if id != "" {
-        loadProducts{ products in
-            self.products = products
-//            self.tableView.reloadData()
-            print(products)
-            print(URLData.shared.productsURL)
-        }
+            loadProducts(catID: id) { products in
+                self.products = products
+                self.collectionView.reloadData()
+                print(products)
+//                print(URLData.shared.productsURL)
+            }
         } else {return}
         print(id)
+        print(products.count)
 
         // Do any additional setup after loading the view.
     }
@@ -48,25 +50,22 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 6
-//        return products.count
+//        return 6
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ProductsCollectionViewCell
         
-        cell.productImage.image = UIImage(named: "Сотовая связь")
-        cell.productName.text =  "No name"
-        cell.productPrice.text = "2600 руб"
+        let product = products[indexPath.row]
+        cell.product = product
+        
+//        cell.productImage.image = UIImage(named: products.)
+//        cell.productName.text =  "No name"
+//        cell.productPrice.text = "2600 руб"
         
         return cell
     }
-    
-    
-    
-    
-    
-    
     
     
     

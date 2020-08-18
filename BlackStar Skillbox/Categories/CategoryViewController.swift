@@ -38,7 +38,7 @@ class CategoryViewController: UIViewController {
         loadCategories { categories in
             self.categories = categories
             self.tableView.reloadData()
-//            print(categories)
+//            print(self.subcategoryArray)
         }
     }
     private func setupSearchBar(){
@@ -76,6 +76,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
             navigationItem.leftBarButtonItem?.isEnabled = true
+            print(subcategoryArray)
 //            cell.showProductsButton.isHidden = false
             
         }
@@ -87,7 +88,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         if !subcategoryArray.isEmpty {
             performSegue(withIdentifier: "Show Products", sender: subcategoryArray[indexPath.row].id)
-//            print(subcategoryArray[indexPath.row].id)
+            print(subcategoryArray[indexPath.row].id)
             return
         }
         

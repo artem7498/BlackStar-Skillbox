@@ -22,7 +22,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         didSet{
             guard let unwrappedProducts = product else {return}
             
-            productImage.image = UIImage(named: unwrappedProducts.mainImage!)
+            productImage.image = UIImage(named: "no data" /*unwrappedProducts.mainImage!*/)
             productPrice.text = unwrappedProducts.price
             productName.text = unwrappedProducts.name
         }

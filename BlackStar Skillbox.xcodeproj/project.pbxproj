@@ -138,8 +138,8 @@
 			children = (
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
-				AC2A0C8524D2926A00511951 /* Products */,
 				AC2A0C8024C992D900511951 /* Categories */,
+				AC2A0C8524D2926A00511951 /* Products */,
 				AC2A0C8124C994BB00511951 /* NetworkService */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
 				AC2A0C8224C994EF00511951 /* Models */,
