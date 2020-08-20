@@ -27,14 +27,19 @@ class ProductsViewController: UIViewController {
             loadProducts(catID: id) { products in
                 self.products = products
                 self.collectionView.reloadData()
-                print(products)
+//                print(products)
 //                print(URLData.shared.productsURL)
             }
         } else {return}
         print(id)
-        print(products.count)
-
-        // Do any additional setup after loading the view.
+//        print(products.count)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PageViewController, segue.identifier == "Show Product Page", let productInfo = sender as? [Products] {
+            vc.productInfo = productInfo
+//            print(productInfo)
+        }
     }
     
 }
@@ -52,6 +57,11 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
         
 //        return 6
         return products.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Show Product Page", sender: products[indexPath.row])
+        print(products[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

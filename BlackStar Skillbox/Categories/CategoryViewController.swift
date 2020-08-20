@@ -76,7 +76,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
             navigationItem.leftBarButtonItem?.isEnabled = true
-            print(subcategoryArray)
+//            print(subcategoryArray)
 //            cell.showProductsButton.isHidden = false
             
         }
@@ -88,7 +88,7 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         if !subcategoryArray.isEmpty {
             performSegue(withIdentifier: "Show Products", sender: subcategoryArray[indexPath.row].id)
-            print(subcategoryArray[indexPath.row].id)
+//            print(subcategoryArray[indexPath.row])
             return
         }
         

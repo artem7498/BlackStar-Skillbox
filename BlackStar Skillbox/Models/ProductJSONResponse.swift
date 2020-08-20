@@ -35,7 +35,7 @@ struct Products {
         productImages.forEach { dictItem in
             if let prodImages = ProductImages(data: dictItem){
                 tempArray.append(prodImages)
-                print(tempArray)
+//                print(tempArray)
             }
         }
         
