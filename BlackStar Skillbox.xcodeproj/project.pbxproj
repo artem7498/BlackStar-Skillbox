@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A4948971B060984B6506BCA /* Pods_BlackStar_Skillbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */; };
+		AC0B38EE24EFED06007BBCE4 /* PageSizePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B38ED24EFED06007BBCE4 /* PageSizePickerTextField.swift */; };
 		AC19D5D924EE31F6001F4667 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC19D5D824EE31F6001F4667 /* PageViewController.swift */; };
 		AC2A0C7D24C6ED7400511951 /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C7C24C6ED7400511951 /* URLData.swift */; };
 		AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8324D2925B00511951 /* ProductsViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackStar Skillbox.release.xcconfig"; path = "Target Support Files/Pods-BlackStar Skillbox/Pods-BlackStar Skillbox.release.xcconfig"; sourceTree = "<group>"; };
 		2F732A7B9889213B45457D07 /* Pods_BlackStar_Skillbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackStar_Skillbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC0B38ED24EFED06007BBCE4 /* PageSizePickerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSizePickerTextField.swift; sourceTree = "<group>"; };
 		AC19D5D824EE31F6001F4667 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		AC2A0C7C24C6ED7400511951 /* URLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
 		AC2A0C8324D2925B00511951 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AC19D5D824EE31F6001F4667 /* PageViewController.swift */,
+				AC0B38ED24EFED06007BBCE4 /* PageSizePickerTextField.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -128,7 +131,6 @@
 		AC6FCAD524B83672007E6CC3 = {
 			isa = PBXGroup;
 			children = (
-				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
 				AC6FCAE024B83672007E6CC3 /* BlackStar Skillbox */,
 				AC6FCADF24B83672007E6CC3 /* Products */,
 				6ED322230A9556E26A37D69F /* Pods */,
@@ -149,6 +151,7 @@
 			children = (
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
+				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
 				AC2A0C8024C992D900511951 /* Categories */,
 				AC2A0C8524D2926A00511951 /* Products */,
 				AC19D5D724EE31B3001F4667 /* New Group */,
@@ -283,6 +286,7 @@
 				AC19D5D924EE31F6001F4667 /* PageViewController.swift in Sources */,
 				AC6FCB0324BCB081007E6CC3 /* JSONResponse.swift in Sources */,
 				AC6FCB0124BC467F007E6CC3 /* CategoryTableViewCell.swift in Sources */,
+				AC0B38EE24EFED06007BBCE4 /* PageSizePickerTextField.swift in Sources */,
 				AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */,
 				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
 				AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */,
