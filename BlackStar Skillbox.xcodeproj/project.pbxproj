@@ -14,8 +14,8 @@
 		AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8324D2925B00511951 /* ProductsViewController.swift */; };
 		AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */; };
 		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
-		AC6478F324C0559400632BEB /* SubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */; };
-		AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */; };
+		AC6478F324C0559400632BEB /* ShopingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* ShopingBagViewController.swift */; };
+		AC6478F524C0612300632BEB /* ShopingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* ShopingBagTableViewCell.swift */; };
 		AC65A5C924D696F6003B37DA /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65A5C824D696F6003B37DA /* ProductsCollectionViewCell.swift */; };
 		AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */; };
 		AC6FCAE424B83672007E6CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */; };
@@ -37,8 +37,8 @@
 		AC2A0C8324D2925B00511951 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductJSONResponse.swift; sourceTree = "<group>"; };
 		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
-		AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewController.swift; sourceTree = "<group>"; };
-		AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AC6478F224C0559400632BEB /* ShopingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingBagViewController.swift; sourceTree = "<group>"; };
+		AC6478F424C0612300632BEB /* ShopingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingBagTableViewCell.swift; sourceTree = "<group>"; };
 		AC65A5C824D696F6003B37DA /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC6FCADE24B83672007E6CC3 /* BlackStar Skillbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlackStar Skillbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,15 @@
 				0F78E0A5D9AAC06F00F768FF /* Pods-BlackStar Skillbox.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC0B38EF24F5186D007BBCE4 /* Shoping Bag */ = {
+			isa = PBXGroup;
+			children = (
+				AC6478F224C0559400632BEB /* ShopingBagViewController.swift */,
+				AC6478F424C0612300632BEB /* ShopingBagTableViewCell.swift */,
+			);
+			path = "Shoping Bag";
 			sourceTree = "<group>";
 		};
 		AC19D5D724EE31B3001F4667 /* New Group */ = {
@@ -157,8 +166,7 @@
 				AC19D5D724EE31B3001F4667 /* New Group */,
 				AC2A0C8124C994BB00511951 /* NetworkService */,
 				AC2A0C8224C994EF00511951 /* Models */,
-				AC6478F424C0612300632BEB /* SubcategoryTableViewCell.swift */,
-				AC6478F224C0559400632BEB /* SubcategoryTableViewController.swift */,
+				AC0B38EF24F5186D007BBCE4 /* Shoping Bag */,
 				AC6FCAED24B83675007E6CC3 /* Assets.xcassets */,
 				AC6FCAEF24B83675007E6CC3 /* LaunchScreen.storyboard */,
 				AC6FCAF224B83675007E6CC3 /* Info.plist */,
@@ -289,12 +297,12 @@
 				AC0B38EE24EFED06007BBCE4 /* PageSizePickerTextField.swift in Sources */,
 				AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */,
 				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
-				AC6478F524C0612300632BEB /* SubcategoryTableViewCell.swift in Sources */,
+				AC6478F524C0612300632BEB /* ShopingBagTableViewCell.swift in Sources */,
 				AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,
-				AC6478F324C0559400632BEB /* SubcategoryTableViewController.swift in Sources */,
+				AC6478F324C0559400632BEB /* ShopingBagViewController.swift in Sources */,
 				AC6FCAE424B83672007E6CC3 /* SceneDelegate.swift in Sources */,
 				AC2A0C7D24C6ED7400511951 /* URLData.swift in Sources */,
 			);

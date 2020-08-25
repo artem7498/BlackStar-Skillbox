@@ -41,6 +41,7 @@ class PageViewController: UIViewController {
         articleLabel.text = "Артикул: \(productInfo?.article ?? "No Article")"
         colorLabel.text = "Цвет: \(productInfo?.colorName ?? "No Color")"
         productDescriptionLabel.text = productInfo?.description
+        productPageImageView.image = #imageLiteral(resourceName: "Спортивный костюм")
     }
     
     

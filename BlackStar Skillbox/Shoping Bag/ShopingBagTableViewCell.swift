@@ -8,10 +8,14 @@
 
 import UIKit
 
-class SubcategoryTableViewCell: UITableViewCell {
+class ShopingBagTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var subcategoryImage: UIImageView!
-    @IBOutlet weak var subcategoryNameLabel: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
