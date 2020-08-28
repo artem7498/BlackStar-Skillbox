@@ -36,7 +36,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v26-3q-MYw">
-                                                    <rect key="frame" x="175" y="52.333333333333336" width="146.66666666666663" height="25.333333333333336"/>
+                                                    <rect key="frame" x="175" y="52.666666666666657" width="146.66666666666663" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -70,6 +70,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FzA-z3-j3v"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Категории" selectedImage="folder" catalog="system" id="bP5-e2-VvN"/>
                     <navigationItem key="navigationItem" title="Категории" id="NT0-x1-Umb">
                         <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" style="plain" id="rpE-km-ccf">
                             <connections>
@@ -85,12 +86,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJM-Zu-7hi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="-604"/>
+            <point key="canvasLocation" x="2897.1014492753625" y="-604.01785714285711"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="S75-2p-VuM">
             <objects>
-                <viewController id="Tqa-vS-gOu" customClass="ShopingBagViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Корзина" id="Tqa-vS-gOu" customClass="ShoppingBagViewController" customModule="BlackStar_Skillbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zIh-XY-h6C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +100,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="672"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="aa6-KL-VKY" customClass="ShopingBagTableViewCell" customModule="BlackStar_Skillbox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="aa6-KL-VKY" customClass="ShoppingBagTableViewCell" customModule="BlackStar_Skillbox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aa6-KL-VKY" id="khH-Pc-gC7">
@@ -119,7 +120,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nl-rEW">
-                                                    <rect key="frame" x="361.33333333333331" y="43" width="32.666666666666686" height="22"/>
+                                                    <rect key="frame" x="361.66666666666669" y="43" width="32.333333333333314" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -179,7 +180,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QT-X1-kY9">
-                                        <rect key="frame" x="28" y="25" width="67.333333333333329" height="21"/>
+                                        <rect key="frame" x="28" y="25" width="67.666666666666671" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -219,6 +220,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vnU-ba-NCI"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Корзина" selectedImage="bag" catalog="system" id="5Wx-Xz-GMb"/>
                     <navigationItem key="navigationItem" title="Корзина" largeTitleDisplayMode="never" id="WEI-zL-rfN"/>
                     <connections>
                         <outlet property="tableView" destination="ykP-6G-3Qp" id="yVs-XA-mlO"/>
@@ -386,6 +388,9 @@
                                                         <state key="normal" title="Add to my bag">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="buyButtonn:" destination="Uzs-Gi-aSR" eventType="touchUpInside" id="mTp-yB-1nB"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -455,17 +460,18 @@
                         <outlet property="productNameLabel" destination="w7Z-CV-LiN" id="FXq-n1-8Hg"/>
                         <outlet property="productPageImageView" destination="Oxq-rC-zIt" id="qIN-Ds-y4c"/>
                         <outlet property="sizePickerTextField" destination="2Oo-cE-6dD" id="oi3-Sb-wFw"/>
-                        <segue destination="Tqa-vS-gOu" kind="show" identifier="Show Shoping Bag" id="9ue-Cw-mof"/>
+                        <segue destination="Tqa-vS-gOu" kind="show" identifier="Show Shopping Bag" id="9ue-Cw-mof"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cw6-7g-Jfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2862.3188405797105" y="121.875"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Категории-->
         <scene sceneID="aQ3-if-1Rl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66Q-YW-Sjr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Категории" selectedImage="folder.fill" catalog="system" id="nwD-Ie-HvR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FcW-Gz-uB4">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -478,11 +484,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfm-VZ-JqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.9275362318842" y="-604.01785714285711"/>
+            <point key="canvasLocation" x="1952.1739130434785" y="-604.01785714285711"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
+        <image name="folder.fill" catalog="system" width="128" height="95"/>
         <image name="Спортивный костюм" width="185" height="236"/>
     </resources>
 </document>

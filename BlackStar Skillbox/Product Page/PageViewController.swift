@@ -23,6 +23,27 @@ class PageViewController: UIViewController {
     @IBOutlet weak var productDescriptionLabel: UILabel!
     
     
+    @IBAction func buyButtonn(_ sender: Any) {
+        
+        let chooseSizeAlert = UIAlertController(title: "Размер не выбран", message: "Пожалуйста выберите размер, чтобы добавить товар в корзину", preferredStyle: UIAlertController.Style.alert)
+        chooseSizeAlert.addAction(UIAlertAction(title: "ОК", style: UIAlertAction.Style.default, handler: nil))
+        
+        let addedToBagAlert = UIAlertController(title: "Товар успешно добавлен в корзину", message: "Хотите посмотреть корзину?", preferredStyle: UIAlertController.Style.alert)
+        addedToBagAlert.addAction(UIAlertAction(title: "Да, перейти в корзину", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            self.performSegue(withIdentifier: "Show Shopping Bag", sender: nil)
+        }))
+        addedToBagAlert.addAction(UIAlertAction(title: "Продолжить покупки", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        
+        if sizePickerTextField.text != "" {
+            
+            RealmWorkShoppingBag.shared.save(name: productNameLabel.text ?? "no name", price: priceLabel.text ?? "no price", article: articleLabel.text ?? "no article", size: sizePickerTextField.text!)
+            self.present(addedToBagAlert, animated: true, completion: nil)
+        } else {
+            self.present(chooseSizeAlert, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
