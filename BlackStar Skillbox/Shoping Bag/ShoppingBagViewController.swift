@@ -20,7 +20,9 @@ class ShoppingBagViewController: UIViewController {
     
     @IBOutlet weak var totalPriceLabel: UILabel!
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +55,7 @@ extension ShoppingBagViewController: UITableViewDelegate, UITableViewDataSource 
         let product = shoppingBag[indexPath.row]
         
         cell.productNameLabel.text =  product.name
-        cell.productImageView.image = UIImage(named: "Сотовая связь")
+        cell.productImageView.downloaded(from: product.image) /*UIImage(named: "shopping-2")*/
         cell.sizeLabel.text = product.size
         cell.priceLabel.text = product.price
 

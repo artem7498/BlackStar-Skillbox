@@ -22,7 +22,8 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         didSet{
             guard let unwrappedProducts = product else {return}
             
-            productImage.image = UIImage(named: "no data" /*unwrappedProducts.mainImage!*/)
+            productImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
+//            productImage.image = UIImage(named: "no data" /*unwrappedProducts.mainImage!*/)
             productPrice.text = unwrappedProducts.price
             productName.text = unwrappedProducts.name
         }

@@ -15,5 +15,6 @@ class ShoppingBag: Object {
     @objc dynamic var price = ""
     @objc dynamic var article = ""
     @objc dynamic var size = ""
+    @objc dynamic var image = ""
     
 }

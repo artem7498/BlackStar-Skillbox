@@ -55,13 +55,11 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-//        return 6
         return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "Show Product Page", sender: products[indexPath.row])
-//        print(products[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,10 +67,6 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
         
         let product = products[indexPath.row]
         cell.product = product
-        
-//        cell.productImage.image = UIImage(named: products.)
-//        cell.productName.text =  "No name"
-//        cell.productPrice.text = "2600 руб"
         
         return cell
     }

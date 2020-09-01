@@ -19,12 +19,13 @@ class RealmWorkShoppingBag {
           realm.objects(ShoppingBag.self)
       }
       
-    func save(name: String, price: String, article: String, size: String) {
+    func save(name: String, price: String, article: String, size: String, image: String) {
           let bag = ShoppingBag()
         bag.name = name
         bag.price = price
         bag.article = article
         bag.size = size
+        bag.image = image
           try! realm.write {
               realm.add(bag)
           }

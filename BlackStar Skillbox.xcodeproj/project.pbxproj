@@ -15,6 +15,7 @@
 		AC2A0C7D24C6ED7400511951 /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C7C24C6ED7400511951 /* URLData.swift */; };
 		AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8324D2925B00511951 /* ProductsViewController.swift */; };
 		AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */; };
+		AC55A15B24FA6EED00B3EE09 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55A15A24FA6EED00B3EE09 /* PageCollectionViewCell.swift */; };
 		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
 		AC6478F324C0559400632BEB /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* ShoppingBagViewController.swift */; };
 		AC6478F524C0612300632BEB /* ShoppingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* ShoppingBagTableViewCell.swift */; };
@@ -40,6 +41,7 @@
 		AC2A0C7C24C6ED7400511951 /* URLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
 		AC2A0C8324D2925B00511951 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductJSONResponse.swift; sourceTree = "<group>"; };
+		AC55A15A24FA6EED00B3EE09 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
 		AC6478F224C0559400632BEB /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
 		AC6478F424C0612300632BEB /* ShoppingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				AC19D5D824EE31F6001F4667 /* PageViewController.swift */,
+				AC55A15A24FA6EED00B3EE09 /* PageCollectionViewCell.swift */,
 				AC0B38ED24EFED06007BBCE4 /* PageSizePickerTextField.swift */,
 			);
 			path = "Product Page";
@@ -307,6 +310,7 @@
 				AC6478F524C0612300632BEB /* ShoppingBagTableViewCell.swift in Sources */,
 				AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */,
+				AC55A15B24FA6EED00B3EE09 /* PageCollectionViewCell.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,
 				AC6FCAE224B83672007E6CC3 /* AppDelegate.swift in Sources */,
 				AC6478F324C0559400632BEB /* ShoppingBagViewController.swift in Sources */,

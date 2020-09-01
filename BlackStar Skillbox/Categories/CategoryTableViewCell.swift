@@ -16,7 +16,8 @@ class CategoryTableViewCell: UITableViewCell {
         didSet{
             guard let unwrappedCategory = category else {return}
             
-            categoryImage.image = UIImage(named: unwrappedCategory.image! /*?? "сотовая связь"*/)
+            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)
+            categoryImage.image = UIImage(named: "shopping-2" /*unwrappedCategory.image ?? "shopping-2"*/)
             categoryNameLabel.text = unwrappedCategory.name
 //            print(category?.name)
         }
@@ -26,7 +27,8 @@ class CategoryTableViewCell: UITableViewCell {
         didSet{
             guard let unwrappedSubCategory = subCategory else {return}
             
-            categoryImage.image = UIImage(named: unwrappedSubCategory.iconImage!)
+            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedSubCategory.iconImage!)
+//            categoryImage.image = UIImage(named: "Спортивный костюм" /*unwrappedSubCategory.iconImage!*/)
             categoryNameLabel.text = unwrappedSubCategory.subname
         }
     }
