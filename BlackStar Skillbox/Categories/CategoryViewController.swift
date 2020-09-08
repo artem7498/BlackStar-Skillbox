@@ -74,13 +74,10 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         if subcategoryArray.isEmpty {
             let category = categories[indexPath.row]
             cell.category = category
-//            cell.showProductsButton.isHidden = true
         } else {
             let subCategory = subcategoryArray[indexPath.row]
             cell.subCategory = subCategory
             navigationItem.leftBarButtonItem?.isEnabled = true
-//            print(subcategoryArray)
-//            cell.showProductsButton.isHidden = false
             
         }
         
@@ -108,7 +105,7 @@ extension CategoryViewController: UISearchBarDelegate {
 }
 
 extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleToFill) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleToFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
@@ -122,7 +119,7 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleToFill) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleToFill) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }

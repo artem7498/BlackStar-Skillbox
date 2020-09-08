@@ -17,7 +17,7 @@ class CategoryTableViewCell: UITableViewCell {
             guard let unwrappedCategory = category else {return}
             
             categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)
-            categoryImage.image = UIImage(named: "shopping-2" /*unwrappedCategory.image ?? "shopping-2"*/)
+//            categoryImage.image = UIImage(named: "shopping-2")
             categoryNameLabel.text = unwrappedCategory.name
 //            print(category?.name)
         }

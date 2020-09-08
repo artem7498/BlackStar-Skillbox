@@ -21,6 +21,7 @@ class ShoppingBagViewController: UIViewController {
     @IBOutlet weak var totalPriceLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
+        
         reloadData()
     }
     
@@ -36,6 +37,8 @@ class ShoppingBagViewController: UIViewController {
     }
 
     // MARK: - Table view data source
+    
+    
 
 
 }
@@ -55,7 +58,7 @@ extension ShoppingBagViewController: UITableViewDelegate, UITableViewDataSource 
         let product = shoppingBag[indexPath.row]
         
         cell.productNameLabel.text =  product.name
-        cell.productImageView.downloaded(from: product.image) /*UIImage(named: "shopping-2")*/
+        cell.productImageView.downloaded(from: product.image)
         cell.sizeLabel.text = product.size
         cell.priceLabel.text = product.price
 
@@ -66,6 +69,7 @@ extension ShoppingBagViewController: UITableViewDelegate, UITableViewDataSource 
         if editingStyle == .delete {
             RealmWorkShoppingBag.shared.remove(index: indexPath.row)
             self.reloadData()
+            tabBarController?.tabBar.items![1].badgeValue = "\(shoppingBag.count)"
         }
     }
     

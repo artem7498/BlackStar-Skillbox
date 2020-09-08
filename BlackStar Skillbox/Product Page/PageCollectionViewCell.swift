@@ -14,7 +14,7 @@ class PageCollectionViewCell: UICollectionViewCell {
     
     var product: Products? {
             didSet{
-                guard let unwrappedProducts = product else {return}
+//                guard let unwrappedProducts = product else {return}
                 
 //                productImageView.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts)
                 

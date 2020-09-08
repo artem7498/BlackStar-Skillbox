@@ -16,6 +16,7 @@
 		AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8324D2925B00511951 /* ProductsViewController.swift */; };
 		AC2A0C8724D29FB100511951 /* ProductJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */; };
 		AC55A15B24FA6EED00B3EE09 /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55A15A24FA6EED00B3EE09 /* PageCollectionViewCell.swift */; };
+		AC618F3625064552005A5070 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC618F3525064552005A5070 /* TabBarController.swift */; };
 		AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F024BDE25200632BEB /* CategoriesLoader.swift */; };
 		AC6478F324C0559400632BEB /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F224C0559400632BEB /* ShoppingBagViewController.swift */; };
 		AC6478F524C0612300632BEB /* ShoppingBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6478F424C0612300632BEB /* ShoppingBagTableViewCell.swift */; };
@@ -42,6 +43,7 @@
 		AC2A0C8324D2925B00511951 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		AC2A0C8624D29FB100511951 /* ProductJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductJSONResponse.swift; sourceTree = "<group>"; };
 		AC55A15A24FA6EED00B3EE09 /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC618F3525064552005A5070 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Shoping Bag/TabBarController.swift"; sourceTree = "<group>"; };
 		AC6478F024BDE25200632BEB /* CategoriesLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesLoader.swift; sourceTree = "<group>"; };
 		AC6478F224C0559400632BEB /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
 		AC6478F424C0612300632BEB /* ShoppingBagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagTableViewCell.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		AC6FCAE024B83672007E6CC3 /* BlackStar Skillbox */ = {
 			isa = PBXGroup;
 			children = (
+				AC618F3525064552005A5070 /* TabBarController.swift */,
 				AC6FCAE124B83672007E6CC3 /* AppDelegate.swift */,
 				AC6FCAE324B83672007E6CC3 /* SceneDelegate.swift */,
 				AC6FCAE724B83672007E6CC3 /* Main.storyboard */,
@@ -309,6 +312,7 @@
 				AC6478F124BDE25200632BEB /* CategoriesLoader.swift in Sources */,
 				AC6478F524C0612300632BEB /* ShoppingBagTableViewCell.swift in Sources */,
 				AC2A0C8424D2925B00511951 /* ProductsViewController.swift in Sources */,
+				AC618F3625064552005A5070 /* TabBarController.swift in Sources */,
 				AC6FCAE624B83672007E6CC3 /* CategoryViewController.swift in Sources */,
 				AC55A15B24FA6EED00B3EE09 /* PageCollectionViewCell.swift in Sources */,
 				AC6FCAEC24B83672007E6CC3 /* BlackStar_Skillbox.xcdatamodeld in Sources */,

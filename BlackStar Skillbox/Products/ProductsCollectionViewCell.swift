@@ -21,10 +21,9 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     var product: Products? {
         didSet{
             guard let unwrappedProducts = product else {return}
-            
+//            "\(Int((productInfo?.price as! NSString).floatValue))"
             productImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
-//            productImage.image = UIImage(named: "no data" /*unwrappedProducts.mainImage!*/)
-            productPrice.text = unwrappedProducts.price
+            productPrice.text = "RUB \(Int((unwrappedProducts.price as! NSString).floatValue))"
             productName.text = unwrappedProducts.name
         }
     }

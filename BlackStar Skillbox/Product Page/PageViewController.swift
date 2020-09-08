@@ -10,6 +10,8 @@ import UIKit
 
 class PageViewController: UIViewController {
     
+    let shopBag = RealmWorkShoppingBag.shared.getItems()
+    
     var productInfo: Products?
     var sizes: [String] = []
     var images: [String] = []
@@ -42,6 +44,7 @@ class PageViewController: UIViewController {
         if sizePickerTextField.text != "" {
             
             RealmWorkShoppingBag.shared.save(name: productNameLabel.text ?? "no name", price: priceLabel.text ?? "no price", article: articleLabel.text ?? "no article", size: sizePickerTextField.text!, image: (bagImage + (productInfo?.mainImage)!))
+            tabBarController?.tabBar.items![1].badgeValue = "\(shopBag.count)"
             self.present(addedToBagAlert, animated: true, completion: nil)
         } else {
             self.present(chooseSizeAlert, animated: true, completion: nil)
@@ -71,7 +74,7 @@ class PageViewController: UIViewController {
         print(productInfo)
         
         navigationItem.title = productInfo?.name
-        priceLabel.text = productInfo?.price
+        priceLabel.text = "\(Int((productInfo?.price as! NSString).floatValue)) RUB"
         productNameLabel.text = productInfo?.name
         articleLabel.text = "Артикул: \(productInfo?.article ?? "No Article")"
         colorLabel.text = "Цвет: \(productInfo?.colorName ?? "No Color")"
