@@ -71,6 +71,10 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CategoryTableViewCell
         
+//        if indexPath.row%2 == 0 {
+//            cell.backgroundColor = UIColor.systemGray6
+//        }
+        
         if subcategoryArray.isEmpty {
             let category = categories[indexPath.row]
             cell.category = category

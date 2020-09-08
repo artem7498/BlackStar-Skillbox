@@ -23,7 +23,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
             guard let unwrappedProducts = product else {return}
 //            "\(Int((productInfo?.price as! NSString).floatValue))"
             productImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
-            productPrice.text = "RUB \(Int((unwrappedProducts.price as! NSString).floatValue))"
+            productPrice.text = "\(Int((unwrappedProducts.price! as NSString).floatValue)) ₽"
             productName.text = unwrappedProducts.name
         }
     }

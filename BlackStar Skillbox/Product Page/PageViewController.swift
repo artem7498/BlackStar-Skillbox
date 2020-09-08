@@ -74,7 +74,7 @@ class PageViewController: UIViewController {
         print(productInfo)
         
         navigationItem.title = productInfo?.name
-        priceLabel.text = "\(Int((productInfo?.price as! NSString).floatValue)) RUB"
+        priceLabel.text = "\(Int(((productInfo?.price ?? "0") as NSString).floatValue))"
         productNameLabel.text = productInfo?.name
         articleLabel.text = "Артикул: \(productInfo?.article ?? "No Article")"
         colorLabel.text = "Цвет: \(productInfo?.colorName ?? "No Color")"
@@ -125,4 +125,7 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width, height: self.view.frame.width / 3 * 4)
+    }
 }

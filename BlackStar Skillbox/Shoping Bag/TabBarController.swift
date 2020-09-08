@@ -10,10 +10,14 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    let myBadgeValue = RealmWorkShoppingBag.shared.getItems()
+    let myBadgeValue = RealmWorkShoppingBag.shared.getItems().count
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UITabBar.appearance().tintColor = .red
+        tabBar.barTintColor = .black
+
         
 
         // Do any additional setup after loading the view.
@@ -27,7 +31,11 @@ class TabBarController: UITabBarController {
     
     
     func badgeValueUpdate() {
-        self.tabBar.items![1].badgeValue = "\(myBadgeValue.count)"
+        if myBadgeValue != 0{
+            self.tabBar.items![1].badgeValue = "\(myBadgeValue)"
+        } else {
+            self.tabBar.items![1].badgeValue = nil
+        }
     }
 
 }
