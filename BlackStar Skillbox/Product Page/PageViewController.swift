@@ -34,11 +34,10 @@ class PageViewController: UIViewController {
         let chooseSizeAlert = UIAlertController(title: "Размер не выбран", message: "Пожалуйста выберите размер, чтобы добавить товар в корзину", preferredStyle: UIAlertController.Style.alert)
         chooseSizeAlert.addAction(UIAlertAction(title: "ОК", style: UIAlertAction.Style.default, handler: nil))
         
-        let addedToBagAlert = UIAlertController(title: "Товар успешно добавлен в корзину", message: "Хотите посмотреть корзину?", preferredStyle: UIAlertController.Style.alert)
-        addedToBagAlert.addAction(UIAlertAction(title: "Да, перейти в корзину", style: UIAlertAction.Style.default, handler: { alert -> Void in
-            self.performSegue(withIdentifier: "Show Shopping Bag", sender: nil)
-        }))
-        addedToBagAlert.addAction(UIAlertAction(title: "Продолжить покупки", style: UIAlertAction.Style.cancel, handler: nil))
+        let addedToBagAlert = UIAlertController(title: "Товар успешно добавлен в корзину", message: "\(productNameLabel.text!) \nразмер: \(sizePickerTextField.text!)", preferredStyle: UIAlertController.Style.alert)
+        
+        addedToBagAlert.addAction(UIAlertAction(title: "Продолжить покупки", style: UIAlertAction.Style.default, handler: nil))
+        
         
         
         if sizePickerTextField.text != "" {
@@ -76,8 +75,8 @@ class PageViewController: UIViewController {
         navigationItem.title = productInfo?.name
         priceLabel.text = "\(Int(((productInfo?.price ?? "0") as NSString).floatValue))"
         productNameLabel.text = productInfo?.name
-        articleLabel.text = "Артикул: \(productInfo?.article ?? "No Article")"
-        colorLabel.text = "Цвет: \(productInfo?.colorName ?? "No Color")"
+        articleLabel.text = "\(productInfo?.article ?? "No Article")"
+        colorLabel.text = "\(productInfo?.colorName ?? "No Color")"
         productDescriptionLabel.text = productInfo?.description
 //        productPageImageView.image = #imageLiteral(resourceName: "Спортивный костюм")
     }
