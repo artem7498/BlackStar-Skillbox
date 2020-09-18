@@ -17,7 +17,6 @@ class CategoryTableViewCell: UITableViewCell {
             guard let unwrappedCategory = category else {return}
             
             categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)
-//            categoryImage.image = UIImage(named: "shopping-2")
             categoryNameLabel.text = unwrappedCategory.name
 //            print(category?.name)
         }
@@ -28,7 +27,6 @@ class CategoryTableViewCell: UITableViewCell {
             guard let unwrappedSubCategory = subCategory else {return}
             
             categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedSubCategory.iconImage!)
-//            categoryImage.image = UIImage(named: "Спортивный костюм" /*unwrappedSubCategory.iconImage!*/)
             categoryNameLabel.text = unwrappedSubCategory.subname
         }
     }

@@ -70,7 +70,7 @@ class PageViewController: UIViewController {
         self.imagePageControl.currentPage = 0
         
         
-        print(productInfo)
+//        print(productInfo)
         
         navigationItem.title = productInfo?.name
         priceLabel.text = "\(Int(((productInfo?.price ?? "0") as NSString).floatValue))"
@@ -78,7 +78,6 @@ class PageViewController: UIViewController {
         articleLabel.text = "\(productInfo?.article ?? "No Article")"
         colorLabel.text = "\(productInfo?.colorName ?? "No Color")"
         productDescriptionLabel.text = productInfo?.description
-//        productPageImageView.image = #imageLiteral(resourceName: "Спортивный костюм")
     }
     
     

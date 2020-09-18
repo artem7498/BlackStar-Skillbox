@@ -28,13 +28,12 @@ class CategoryViewController: UIViewController {
 //            print(categories)
         }
     }
-    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSearchBar()
+        
         navigationItem.leftBarButtonItem?.isEnabled = false
-        // Do any additional setup after loading the view.
+        
         loadCategories { categories in
             self.categories = categories
             self.tableView.reloadData()
@@ -43,11 +42,6 @@ class CategoryViewController: UIViewController {
         
         
         
-    }
-    private func setupSearchBar(){
-        navigationItem.searchController = searchController
-        searchController.searchBar.delegate = self
-        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -92,7 +86,6 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         
         if !subcategoryArray.isEmpty {
             performSegue(withIdentifier: "Show Products", sender: subcategoryArray[indexPath.row].id)
-//            print(subcategoryArray[indexPath.row])
             return
         }
         
@@ -100,12 +93,6 @@ extension CategoryViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
     }
     
-}
-
-extension CategoryViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }
 }
 
 extension UIImageView {
