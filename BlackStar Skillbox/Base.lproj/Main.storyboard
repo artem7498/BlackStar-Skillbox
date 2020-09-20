@@ -32,6 +32,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Or-cq-DTk">
                                                     <rect key="frame" x="20" y="2.6666666666666714" width="125" height="125"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="125" id="7dc-iH-H8k"/>
                                                         <constraint firstAttribute="width" constant="125" id="aAG-uX-fBb"/>
@@ -561,11 +562,11 @@
             </objects>
             <point key="canvasLocation" x="2893" y="155"/>
         </scene>
-        <!--Катеегории-->
+        <!--Категории-->
         <scene sceneID="aQ3-if-1Rl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="66Q-YW-Sjr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Катеегории" image="square.stack.3d.down.right.fill" catalog="system" id="nwD-Ie-HvR">
+                    <tabBarItem key="tabBarItem" title="Категории" image="square.stack.3d.down.right.fill" catalog="system" id="nwD-Ie-HvR">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
