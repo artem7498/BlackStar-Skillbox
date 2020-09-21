@@ -61,10 +61,18 @@ class PageViewController: UIViewController {
         productSizesLoader()
         productImagesLoader()
         
+        
         self.sizePickerTextField.displayNameHandler = { item in
             return (item as? String) ?? "" }
         self.sizePickerTextField.itemSelectionHandler = { index, item in
             print("\(index), \(item as? String)") }
+        
+        if sizePickerTextField.pickerDatas.count == 1 {
+            sizePickerTextField.text = sizePickerTextField.pickerDatas[0] as? String
+            sizePickerTextField.isEnabled = false
+        } else {
+            sizePickerTextField.isEnabled = true
+        }
         
         self.imagePageControl.numberOfPages = images.count
         self.imagePageControl.currentPage = 0

@@ -10,9 +10,10 @@ import UIKit
 
 class ProductsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productPrice: UILabel!
-    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var previousPriceLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
     
     @IBAction func productBuyButton(_ sender: Any) {
     }
@@ -22,9 +23,9 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         didSet{
             guard let unwrappedProducts = product else {return}
 //            "\(Int((productInfo?.price as! NSString).floatValue))"
-            productImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
-            productPrice.text = "\(Int((unwrappedProducts.price! as NSString).floatValue)) ₽"
-            productName.text = unwrappedProducts.name
+            productImageView.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
+            productPriceLabel.text = "\(Int((unwrappedProducts.price! as NSString).floatValue)) ₽"
+            productNameLabel.text = unwrappedProducts.name
         }
     }
     

@@ -48,10 +48,13 @@ class ProductsViewController: UIViewController {
 extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        
         let w = (UIScreen.main.bounds.size.width - 10) / 2
         let h = (UIScreen.main.bounds.size.height - 120) / 2
+        
         return CGSize(width: w, height: h)
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
