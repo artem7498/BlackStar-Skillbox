@@ -50,6 +50,7 @@ class ShoppingBagViewController: UIViewController {
             sum += Int(items.price) ?? 0
         }
         totalPriceLabel.text = "\(sum) ₽"
+        print(totalPriceLabel.text)
     }
     
     func createEmptyLabel() {
