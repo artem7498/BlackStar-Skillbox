@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductsCollectionViewCell: UICollectionViewCell {
     
@@ -23,7 +24,8 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         didSet{
             guard let unwrappedProducts = product else {return}
 //            "\(Int((productInfo?.price as! NSString).floatValue))"
-            productImageView.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
+            productImageView.af.setImage(withURL: URL(string: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)!)
+//            productImageView.downloaded(from: "https://blackstarshop.ru/" + unwrappedProducts.mainImage!)
             productPriceLabel.text = "\(Int((unwrappedProducts.price! as NSString).floatValue)) ₽"
             productNameLabel.text = unwrappedProducts.name
         }

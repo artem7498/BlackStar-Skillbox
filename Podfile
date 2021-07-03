@@ -8,5 +8,6 @@ target 'BlackStar Skillbox' do
   # Pods for BlackStar Skillbox
 
 pod 'RealmSwift'
-pod 'Alamofire', '~> 5.2'
+pod 'Alamofire'
+pod 'AlamofireImage'
 end

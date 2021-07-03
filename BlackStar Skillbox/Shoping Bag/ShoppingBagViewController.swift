@@ -49,8 +49,8 @@ class ShoppingBagViewController: UIViewController {
         for items in bag{
             sum += Int(items.price) ?? 0
         }
-        totalPriceLabel.text = "\(sum) ₽"
-        print(totalPriceLabel.text)
+//        totalPriceLabel.text = "\(sum) ₽"
+//        print(totalPriceLabel.text)
     }
     
     func createEmptyLabel() {
@@ -90,7 +90,8 @@ extension ShoppingBagViewController: UITableViewDelegate, UITableViewDataSource 
         let product = shoppingBag[indexPath.row]
         
         cell.productNameLabel.text =  product.name
-        cell.productImageView.downloaded(from: product.image)
+        cell.productImageView.af.setImage(withURL: URL(string: product.image)!)
+//        cell.productImageView.downloaded(from: product.image)
         cell.sizeLabel.text = product.size
         cell.priceLabel.text = product.price
 

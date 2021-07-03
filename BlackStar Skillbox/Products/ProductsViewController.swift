@@ -24,9 +24,16 @@ class ProductsViewController: UIViewController {
 //        print(URLData.shared.productsURL)
         
         if id != "" {
-            loadProducts(catID: id) { products in
-                self.products = products
-                self.collectionView.reloadData()
+            loadProducts(catID: id) { result in
+                switch result {
+                case .success(let products):
+                    self.products = products
+                    self.collectionView.reloadData()
+                    break
+                case .failure(let error):
+                    print(error)
+                    break
+                }
 //                print(products)
 //                print(URLData.shared.productsURL)
             }

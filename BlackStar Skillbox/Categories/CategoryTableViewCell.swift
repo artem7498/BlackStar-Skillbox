@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CategoryTableViewCell: UITableViewCell {
     
@@ -15,8 +16,8 @@ class CategoryTableViewCell: UITableViewCell {
     var category: Category? {
         didSet{
             guard let unwrappedCategory = category else {return}
-            
-            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)
+            categoryImage.af.setImage(withURL: URL(string: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)!)
+//            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedCategory.iconImage!)
             categoryNameLabel.text = unwrappedCategory.name
 //            print(category?.name)
         }
@@ -25,8 +26,8 @@ class CategoryTableViewCell: UITableViewCell {
     var subCategory: Subcategory? {
         didSet{
             guard let unwrappedSubCategory = subCategory else {return}
-            
-            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedSubCategory.iconImage!)
+            categoryImage.af.setImage(withURL: URL(string: "https://blackstarshop.ru/" + unwrappedSubCategory.iconImage!)!)
+//            categoryImage.downloaded(from: "https://blackstarshop.ru/" + unwrappedSubCategory.iconImage!)
             categoryNameLabel.text = unwrappedSubCategory.subname
         }
     }

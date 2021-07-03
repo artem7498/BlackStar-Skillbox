@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PageViewController: UIViewController {
     
@@ -122,7 +123,8 @@ extension PageViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PageCollectionViewCell
         
-        cell.productImageView.downloaded(from: "https://blackstarshop.ru/" + images[indexPath.row])
+        cell.productImageView.af.setImage(withURL: URL(string: "https://blackstarshop.ru/" + images[indexPath.row])!)
+//        cell.productImageView.downloaded(from: "https://blackstarshop.ru/" + images[indexPath.row])
         
         return cell
     }

@@ -22,9 +22,16 @@ class CategoryViewController: UIViewController {
         categories.removeAll()
         subcategoryArray.removeAll()
         navigationItem.leftBarButtonItem?.isEnabled = false
-        loadCategories { categories in
-            self.categories = categories
-            self.tableView.reloadData()
+        loadCategories { result in
+            switch result {
+            case .success(let categories):
+                self.categories = categories
+                self.tableView.reloadData()
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
 //            print(categories)
         }
     }
@@ -34,9 +41,16 @@ class CategoryViewController: UIViewController {
         
         navigationItem.leftBarButtonItem?.isEnabled = false
         
-        loadCategories { categories in
-            self.categories = categories
-            self.tableView.reloadData()
+        loadCategories { result in
+            switch result {
+            case .success(let categories):
+                self.categories = categories
+                self.tableView.reloadData()
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
 //            print(self.subcategoryArray)
         }
         
